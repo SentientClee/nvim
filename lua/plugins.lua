@@ -25,7 +25,23 @@ return require('packer').startup(function(use)
   use {'morhetz/gruvbox', config = function() vim.cmd('colorscheme gruvbox') end}
 
   -- netrw file/folder navigation shortcuts
-  use 'tpope/vim-vinegar'
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
+
+  -- status/tabline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require('lualine').setup {
+        options = { 
+          theme = 'codedark',
+        },
+      }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
