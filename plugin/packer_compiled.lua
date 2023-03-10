@@ -84,6 +84,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/clee/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-vinegar"] = {
+    loaded = true,
+    path = "/home/clee/.local/share/nvim/site/pack/packer/start/vim-vinegar",
+    url = "https://github.com/tpope/vim-vinegar"
   }
 }
 

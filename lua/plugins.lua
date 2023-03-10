@@ -1,7 +1,7 @@
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source % | PackerCompile
   augroup end
 ]])
 
@@ -20,8 +20,12 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- My plugins here
+
+  -- colorscheme
   use {'morhetz/gruvbox', config = function() vim.cmd('colorscheme gruvbox') end}
+
+  -- netrw file/folder navigation shortcuts
+  use 'tpope/vim-vinegar'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
