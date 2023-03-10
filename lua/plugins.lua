@@ -1,7 +1,7 @@
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source % | PackerCompile
+    autocmd BufWritePost plugins.lua source % | PackerSync
   augroup end
 ]])
 
@@ -24,12 +24,6 @@ return require('packer').startup(function(use)
   -- colorscheme
   use {'morhetz/gruvbox', config = function() vim.cmd('colorscheme gruvbox') end}
 
-  -- netrw file/folder navigation shortcuts
-  use {
-    'stevearc/oil.nvim',
-    config = function() require('oil').setup() end
-  }
-
   -- status/tabline
   use {
     'nvim-lualine/lualine.nvim',
@@ -41,6 +35,18 @@ return require('packer').startup(function(use)
         },
       }
     end
+  }
+
+  -- netrw file/folder navigation shortcuts
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
+
+  -- fuzzy finder
+  use {
+    'junegunn/fzf.vim',
+    requires = { 'junegunn/fzf', run = ':call fzf#install()' }
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
