@@ -40,7 +40,9 @@ return require('packer').startup(function(use)
   -- netrw file/folder navigation shortcuts
   use {
     'stevearc/oil.nvim',
-    config = function() require('oil').setup() end
+    config = function() require('oil').setup({
+      view_options = { show_hidden = true }
+    }) end
   }
 
   -- fuzzy finder
