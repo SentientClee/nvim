@@ -30,14 +30,14 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function()
       require('lualine').setup {
-        options = { 
+        options = {
           theme = 'codedark',
         },
       }
     end
   }
 
-  -- netrw file/folder navigation shortcuts
+  -- netrw style file/folder navigation shortcuts
   use {
     'stevearc/oil.nvim',
     config = function() require('oil').setup({
@@ -49,6 +49,25 @@ return require('packer').startup(function(use)
   use {
     'junegunn/fzf.vim',
     requires = { 'junegunn/fzf', run = ':call fzf#install()' }
+  }
+
+  -- Git signs in gutter
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
+
+  -- highlights trailing whitespace characters
+  use 'ntpeters/vim-better-whitespace'
+
+  -- comment mappings
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
