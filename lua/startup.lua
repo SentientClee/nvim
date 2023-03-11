@@ -15,6 +15,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
   dashboard.button("d", "  Explore", ":Oil<CR>"),
+  dashboard.button("f", "󰘳  Commands", ":FzfLua<CR>"),
   dashboard.button("f", "  Find file", ":FzfLua files<CR>"),
   dashboard.button("g", "  Find word", ":FzfLua live_grep<CR>"),
   dashboard.button("q", "  Quit", ":qa<CR>"),
