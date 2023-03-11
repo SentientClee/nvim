@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
+  -- startup
+  use 'goolord/alpha-nvim'
+
   -- status/tabline
   use {
     'nvim-lualine/lualine.nvim',
