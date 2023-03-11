@@ -24,10 +24,12 @@ return require('packer').startup(function(use)
   -- colorscheme
   use {'morhetz/gruvbox', config = function() vim.cmd('colorscheme gruvbox') end}
 
+  -- icons
+  use 'kyazdani42/nvim-web-devicons'
+
   -- status/tabline
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
     config = function()
       require('lualine').setup {
         options = {
@@ -47,7 +49,7 @@ return require('packer').startup(function(use)
 
   -- fuzzy finder
   use {
-    'junegunn/fzf.vim',
+    'ibhagwan/fzf-lua',
     requires = { 'junegunn/fzf', run = ':call fzf#install()' }
   }
 
@@ -59,9 +61,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- highlights trailing whitespace characters
-  use 'ntpeters/vim-better-whitespace'
-
   -- comment mappings
   use {
     'numToStr/Comment.nvim',
@@ -69,6 +68,14 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
   }
+
+  -- mappings to easily delete, change and add such surroundings in pairs
+  use({
+    'kylechui/nvim-surround',
+    config = function()
+        require('nvim-surround').setup()
+    end
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

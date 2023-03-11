@@ -2,9 +2,13 @@ local function map(m, k, v)
   vim.keymap.set(m, k, v, { silent = true })
 end
 
--- fzf "ctrl-p" style
-map('n', '<C-P>', ':FZF<CR>')
 -- oil "vinegar" style
 map('n', '-', require('oil').open, { desc = 'Open parent directory' })
--- go to fzf buffers, similar to "nnoremap gb :ls<cr>:b<space>"
-map('n', '<leader>gb', ':Buffer<CR>')
+-- fzf files
+map('n', '<C-p>', '<cmd>FzfLua files<CR>')
+-- fzf grep
+map('n', '<C-g>', '<cmd>FzfLua live_grep<CR>')
+-- fzf buffers
+map('n', '<C-b>', '<cmd>FzfLua buffers<CR>')
+-- fzf commands
+map('n', '<C-k>', '<cmd>FzfLua<CR>')
