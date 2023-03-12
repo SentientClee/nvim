@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
   -- startup
   use 'goolord/alpha-nvim'
 
-  -- status/tabline
+  -- statusline
   use {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -39,6 +39,13 @@ return require('packer').startup(function(use)
           theme = 'codedark',
         },
       }
+    end
+  }
+
+  -- tabline
+  use { 'alvarosevilla95/luatab.nvim',
+    config = function()
+      require('luatab').setup {}
     end
   }
 
