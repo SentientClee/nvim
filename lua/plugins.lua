@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use {'morhetz/gruvbox', config = function() vim.cmd('colorscheme gruvbox') end}
+  use {"ellisonleao/gruvbox.nvim", config = function() vim.cmd('colorscheme gruvbox') end}
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
