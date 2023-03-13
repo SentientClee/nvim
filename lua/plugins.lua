@@ -22,7 +22,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use {"ellisonleao/gruvbox.nvim", config = function() vim.cmd('colorscheme gruvbox') end}
+  use {
+    'folke/tokyonight.nvim',
+    config = function()
+      vim.cmd('colorscheme tokyonight-night')
+    end
+  }
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
@@ -36,7 +41,7 @@ return require('packer').startup(function(use)
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'codedark',
+          theme = 'tokyonight',
         },
       }
     end
@@ -86,6 +91,29 @@ return require('packer').startup(function(use)
         require('nvim-surround').setup()
     end
   })
+
+  -- syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+        require('nvim-treesitter.install').update({ with_sync = true })()
+    end,
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        ensure_installed = {
+          "tsx",
+          "javascript",
+          "json",
+          "yaml",
+          "css",
+          "html",
+          "lua"
+        },
+        highlight = { enable = true },
+        indent = { enable = true }
+      })
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
