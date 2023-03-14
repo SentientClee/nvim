@@ -115,14 +115,19 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- coc (lsp)
+  -- Native lsp
   use {
-    'neoclide/coc.nvim',
-    branch = 'release',
-    config = function()
-      require('coc')
-    end
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    "neovim/nvim-lspconfig",
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
   }
+  -- Configure native lsp
+  require("lsp")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
