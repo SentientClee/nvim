@@ -21,6 +21,31 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+        require('nvim-treesitter.install').update({ with_sync = true })()
+    end,
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        ensure_installed = {
+          'tsx',
+          'javascript',
+          'json',
+          'yaml',
+          'css',
+          'html',
+          'lua',
+          'markdown',
+          'markdown_inline'
+        },
+        highlight = { enable = true },
+        indent = { enable = true }
+      })
+    end
+  }
+
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
@@ -92,29 +117,6 @@ return require('packer').startup(function(use)
     end
   })
 
-  -- syntax highlighting
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-        require('nvim-treesitter.install').update({ with_sync = true })()
-    end,
-    config = function()
-      require('nvim-treesitter.configs').setup({
-        ensure_installed = {
-          'tsx',
-          'javascript',
-          'json',
-          'yaml',
-          'css',
-          'html',
-          'lua'
-        },
-        highlight = { enable = true },
-        indent = { enable = true }
-      })
-    end
-  }
-
   -- Native lsp
   use {
     'williamboman/mason.nvim',
@@ -125,6 +127,8 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
+    'onsails/lspkind.nvim',
+    'glepnir/lspsaga.nvim'
   }
   -- Configure native lsp
   require("lsp")
