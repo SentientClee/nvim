@@ -21,6 +21,9 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- icons
+  use 'kyazdani42/nvim-web-devicons'
+
   -- colorscheme
   use {
     'folke/tokyonight.nvim',
@@ -28,9 +31,6 @@ return require('packer').startup(function(use)
       vim.cmd('colorscheme tokyonight-night')
     end
   }
-
-  -- icons
-  use 'kyazdani42/nvim-web-devicons'
 
   -- startup
   use 'goolord/alpha-nvim'
@@ -101,17 +101,26 @@ return require('packer').startup(function(use)
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed = {
-          "tsx",
-          "javascript",
-          "json",
-          "yaml",
-          "css",
-          "html",
-          "lua"
+          'tsx',
+          'javascript',
+          'json',
+          'yaml',
+          'css',
+          'html',
+          'lua'
         },
         highlight = { enable = true },
         indent = { enable = true }
       })
+    end
+  }
+
+  -- coc (lsp)
+  use {
+    'neoclide/coc.nvim',
+    branch = 'release',
+    config = function()
+      require('coc')
     end
   }
 
