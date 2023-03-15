@@ -9,3 +9,5 @@ require("lsp.completion")
 require("lsp.format")
 -- ts
 require("lsp.ts")
+-- lua
+require("lsp.lua")
