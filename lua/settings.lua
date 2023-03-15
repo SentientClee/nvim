@@ -2,7 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- map leader key to space
-g.mapleader = ' '
+g.mapleader = " "
 
 -- override 'ignorecase' when pattern has uppercase characters
 opt.ignorecase = true

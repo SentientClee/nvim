@@ -1,4 +1,4 @@
-require('settings')
-require('plugins')
-require('keybindings')
-require('startup')
+require("settings")
+require("plugins")
+require("keybindings")
+require("startup")
