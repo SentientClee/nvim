@@ -123,12 +123,14 @@ return require('packer').startup(function(use)
     'williamboman/mason-lspconfig.nvim',
     "neovim/nvim-lspconfig",
     'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
     'onsails/lspkind.nvim',
-    'glepnir/lspsaga.nvim'
+    'glepnir/lspsaga.nvim',
+    'jose-elias-alvarez/typescript.nvim'
   }
   -- Configure native lsp
   require("lsp")

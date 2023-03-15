@@ -20,3 +20,9 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 -- tabs are spaces
 opt.expandtab = true
+-- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
+-- delays and poor user experience (from CoC)
+opt.updatetime = 300
+-- Always show the signcolumn, otherwise it would shift the text each time
+-- diagnostics appeared/became resolved
+opt.signcolumn = "yes"
