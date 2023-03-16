@@ -19,8 +19,8 @@ require("trouble").setup({})
 base.on_attach = function(client, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	-- local bufopts = { noremap = true, silent = true, buffer = bufnr }
-	-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+	local bufopts = { noremap = true, silent = true, buffer = bufnr }
+	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 	-- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 	-- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
 	-- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
@@ -61,7 +61,7 @@ base.on_attach = function(client, bufnr)
 	-- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 	-- It also supports tagstack
 	-- Use <C-t> to jump back
-	keymap("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
+	keymap("n", "gy", "<cmd>Lspsaga peek_type_definition<CR>")
 
 	-- Go to type definition
 	-- keymap("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
@@ -82,14 +82,14 @@ base.on_attach = function(client, bufnr)
 
 	-- Diagnostic jump
 	-- You can use <C-o> to jump back to your previous location
-	keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
-	keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+	keymap("n", "[g", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+	keymap("n", "]g", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
 	-- Diagnostic jump with filters such as only jumping to an error
-	keymap("n", "[E", function()
+	keymap("n", "[G", function()
 		require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
 	end)
-	keymap("n", "]E", function()
+	keymap("n", "]G", function()
 		require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
 	end)
 

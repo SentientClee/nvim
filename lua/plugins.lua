@@ -60,9 +60,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- startup
-	use("goolord/alpha-nvim")
-
 	-- statusline
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -74,6 +71,9 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	-- startup
+	use("goolord/alpha-nvim")
 
 	-- tabline
 	use({
@@ -89,6 +89,10 @@ return require("packer").startup(function(use)
 		config = function()
 			require("oil").setup({
 				view_options = { show_hidden = true },
+				keymaps = {
+					["<C-p>"] = false,
+					["<leader><C-p>"] = "actions.preview",
+				},
 			})
 		end,
 	})
