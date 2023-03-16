@@ -4,6 +4,7 @@ require("lspsaga").setup({
 		on_insert = false,
 	},
 })
+require("trouble").setup({})
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -18,8 +19,8 @@ require("lspsaga").setup({
 base.on_attach = function(client, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	-- local bufopts = { noremap=true, silent=true, buffer=bufnr }
-	-- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+	-- local bufopts = { noremap = true, silent = true, buffer = bufnr }
+	-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 	-- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 	-- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
 	-- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
@@ -37,11 +38,8 @@ base.on_attach = function(client, bufnr)
 
 	local keymap = vim.keymap.set
 
-	-- LSP finder - Find the symbol's definition
-	-- If there is no definition, it will instead be hidden
-	-- When you use an action in finder like "open vsplit",
-	-- you can use <C-t> to jump back
-	keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+	-- fzf<3lua for references
+	keymap("n", "gr", "<cmd>FzfLua lsp_references<CR>")
 
 	-- Code action
 	keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
@@ -49,16 +47,12 @@ base.on_attach = function(client, bufnr)
 	-- Rename all occurrences of the hovered word for the entire file
 	keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>")
 
-	-- Rename all occurrences of the hovered word for the selected files
-	-- keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>")
-
 	-- Peek definition
 	-- You can edit the file containing the definition in the floating window
 	-- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 	-- It also supports tagstack
 	-- Use <C-t> to jump back
 	keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
-
 	-- Go to definition
 	-- keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
 
@@ -75,14 +69,16 @@ base.on_attach = function(client, bufnr)
 	-- Show line diagnostics
 	-- You can pass argument ++unfocus to
 	-- unfocus the show_line_diagnostics floating window
-	keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+	-- keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
 	-- Show cursor diagnostics
 	-- Like show_line_diagnostics, it supports passing the ++unfocus argument
-	keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
+	-- keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
 
 	-- Show buffer diagnostics
-	keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
+	keymap("n", "<leader>sb", "<cmd>Trouble document_diagnostics<CR>")
+	-- Show workspace diagnostics
+	keymap("n", "<leader>sw", "<cmd>Trouble workspace_diagnostics<CR>")
 
 	-- Diagnostic jump
 	-- You can use <C-o> to jump back to your previous location

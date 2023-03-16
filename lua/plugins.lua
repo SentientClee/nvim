@@ -138,6 +138,7 @@ return require("packer").startup(function(use)
 		"glepnir/lspsaga.nvim",
 		"jose-elias-alvarez/typescript.nvim",
 		"jose-elias-alvarez/null-ls.nvim",
+		"folke/trouble.nvim",
 	})
 	-- Configure native lsp
 	require("lsp")
