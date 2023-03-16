@@ -143,6 +143,8 @@ return require("packer").startup(function(use)
 		"jose-elias-alvarez/typescript.nvim",
 		"jose-elias-alvarez/null-ls.nvim",
 		"folke/trouble.nvim",
+		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
 	})
 	-- Configure native lsp
 	require("lsp")
