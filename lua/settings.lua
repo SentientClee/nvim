@@ -26,3 +26,6 @@ opt.updatetime = 300
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appeared/became resolved
 opt.signcolumn = "yes"
+-- split options
+opt.splitright = true
+opt.splitbelow = true
