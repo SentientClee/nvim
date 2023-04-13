@@ -1,7 +1,7 @@
 -- Configure mason and mason-lspconfig first
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver" },
+	ensure_installed = { "lua_ls", "tsserver", "tailwindcss" },
 })
 -- cmp config
 require("lsp.completion")
