@@ -1,7 +1,7 @@
 -- Configure mason and mason-lspconfig first
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver", "tailwindcss" },
+	ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "svelte" },
 })
 -- cmp config
 require("lsp.completion")
@@ -11,3 +11,5 @@ require("lsp.format")
 require("lsp.ts")
 -- lua
 require("lsp.lua")
+-- svelte
+require("lsp.svelte")
