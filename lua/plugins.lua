@@ -33,20 +33,27 @@ return require("packer").startup(function(use)
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
-					"tsx",
-					"javascript",
-					"json",
-					"yaml",
 					"css",
 					"html",
+					"javascript",
+					"json",
 					"lua",
 					"markdown",
 					"markdown_inline",
+					"svelte",
+					"tsx",
+					"typescript",
+					"yaml",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
+				context_commentstring = {
+					enable = true,
+					enable_autocmd = false,
+				},
 			})
 		end,
+		requires = { "JoosepAlviste/nvim-ts-context-commentstring" },
 	})
 
 	-- icons
@@ -115,7 +122,9 @@ return require("packer").startup(function(use)
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
-			require("Comment").setup()
+			require("Comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+			})
 		end,
 	})
 
