@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/clee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -77,201 +77,201 @@ _G.packer_plugins = {
   ["Comment.nvim"] = {
     config = { "\27LJ\2\n \1\0\0\6\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0006\3\0\0'\5\3\0B\3\2\0029\3\4\3B\3\1\2=\3\6\2B\0\2\1K\0\1\0\rpre_hook\1\0\0\20create_pre_hook7ts_context_commentstring.integrations.comment_nvim\nsetup\fComment\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lsp-signature-help"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   fzf = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/fzf",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
   ["fzf-lua"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     config = { "\27LJ\2\n`\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\15tokyonight\nsetup\flualine\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["luatab.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vluatab\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/luatab.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/luatab.nvim",
     url = "https://github.com/alvarosevilla95/luatab.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\nª\2\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\26context_commentstring\1\0\2\venable\2\19enable_autocmd\1\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\bcss\thtml\15javascript\tjson\blua\rmarkdown\20markdown_inline\vsvelte\btsx\15typescript\tyaml\nsetup\28nvim-treesitter.configs\frequire\0" },
+    config = { "\27LJ\2\nª\2\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\26context_commentstring\1\0\2\19enable_autocmd\1\venable\2\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\bcss\thtml\15javascript\tjson\blua\rmarkdown\20markdown_inline\vsvelte\btsx\15typescript\tyaml\nsetup\28nvim-treesitter.configs\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["oil.nvim"] = {
     config = { "\27LJ\2\n•\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\fkeymaps\1\0\2\n<C-p>\1\18<leader><C-p>\20actions.preview\17view_options\1\0\0\1\0\1\16show_hidden\2\nsetup\boil\frequire\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["tokyonight.nvim"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-night\bcmd\bvim\0" },
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
-    path = "/home/clee/.local/share/nvim/site/pack/packer/start/typescript.nvim",
+    path = "/Users/clee/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n \1\0\0\6\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0006\3\0\0'\5\3\0B\3\2\0029\3\4\3B\3\1\2=\3\6\2B\0\2\1K\0\1\0\rpre_hook\1\0\0\20create_pre_hook7ts_context_commentstring.integrations.comment_nvim\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\15tokyonight\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\nª\2\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\26context_commentstring\1\0\2\venable\2\19enable_autocmd\1\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\bcss\thtml\15javascript\tjson\blua\rmarkdown\20markdown_inline\vsvelte\btsx\15typescript\tyaml\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: tokyonight.nvim
-time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-night\bcmd\bvim\0", "config", "tokyonight.nvim")
-time([[Config for tokyonight.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 -- Config for: oil.nvim
 time([[Config for oil.nvim]], true)
 try_loadstring("\27LJ\2\n•\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\fkeymaps\1\0\2\n<C-p>\1\18<leader><C-p>\20actions.preview\17view_options\1\0\0\1\0\1\16show_hidden\2\nsetup\boil\frequire\0", "config", "oil.nvim")
 time([[Config for oil.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\nª\2\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\26context_commentstring\1\0\2\19enable_autocmd\1\venable\2\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\bcss\thtml\15javascript\tjson\blua\rmarkdown\20markdown_inline\vsvelte\btsx\15typescript\tyaml\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: luatab.nvim
 time([[Config for luatab.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vluatab\frequire\0", "config", "luatab.nvim")
 time([[Config for luatab.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n \1\0\0\6\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0006\3\0\0'\5\3\0B\3\2\0029\3\4\3B\3\1\2=\3\6\2B\0\2\1K\0\1\0\rpre_hook\1\0\0\20create_pre_hook7ts_context_commentstring.integrations.comment_nvim\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: tokyonight.nvim
+time([[Config for tokyonight.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-night\bcmd\bvim\0", "config", "tokyonight.nvim")
+time([[Config for tokyonight.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
