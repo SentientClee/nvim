@@ -67,6 +67,17 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- Highlights
+	-- TODO:
+	-- NOTE:
+	-- etc.
+	use({
+		"folke/todo-comments.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	})
+
 	-- statusline
 	use({
 		"nvim-lualine/lualine.nvim",
