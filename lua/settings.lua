@@ -4,6 +4,8 @@ local g = vim.g
 -- map leader key to space
 g.mapleader = " "
 
+-- disable swap files
+opt.swapfile = false
 -- override 'ignorecase' when pattern has uppercase characters
 opt.ignorecase = true
 -- ignore case when using a search pattern
