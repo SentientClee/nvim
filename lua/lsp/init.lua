@@ -10,6 +10,6 @@ require("lsp.format")
 -- ts
 require("lsp.ts")
 -- lua
--- require("lsp.lua")
+require("lsp.lua")
 -- svelte
 require("lsp.svelte")

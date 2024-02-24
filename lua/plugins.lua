@@ -116,9 +116,11 @@ return require("packer").startup(function(use)
 	})
 
 	-- fuzzy finder
+	-- NOTE: Be sure to install 'fd' and 'rg' for find and fuzzy search.
 	use({
 		"ibhagwan/fzf-lua",
-		requires = { "junegunn/fzf", run = ":call fzf#install()" },
+		-- optional for icon support
+		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 
 	-- Git signs in gutter
