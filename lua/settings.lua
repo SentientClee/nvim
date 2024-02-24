@@ -4,6 +4,10 @@ local g = vim.g
 -- map leader key to space
 g.mapleader = " "
 
+-- faster loading for commentstring module see:
+-- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
+g.skip_ts_context_commentstring_module = true
+
 -- disable swap files
 opt.swapfile = false
 -- override 'ignorecase' when pattern has uppercase characters

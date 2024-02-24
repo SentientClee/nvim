@@ -47,10 +47,6 @@ return require("packer").startup(function(use)
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
-				context_commentstring = {
-					enable = true,
-					enable_autocmd = false,
-				},
 			})
 		end,
 		requires = { "JoosepAlviste/nvim-ts-context-commentstring" },
