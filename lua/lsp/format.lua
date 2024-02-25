@@ -34,11 +34,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettierd.with({
 			extra_filetypes = { "svelte" },
 		}),
-		null_ls.builtins.diagnostics.eslint_d.with({
-			condition = function(utils)
-				return utils.root_has_file({ ".eslintrc.json" })
-			end,
-		}),
 	},
 	on_attach = on_attach,
 })

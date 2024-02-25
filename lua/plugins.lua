@@ -159,7 +159,7 @@ return require("packer").startup(function(use)
 		"onsails/lspkind.nvim",
 		"glepnir/lspsaga.nvim",
 		"jose-elias-alvarez/typescript.nvim",
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		"folke/trouble.nvim",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
