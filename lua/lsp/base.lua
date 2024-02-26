@@ -119,9 +119,4 @@ base.on_attach = function(client, bufnr)
 	keymap({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
 end
 
-base.lsp_flags = {
-	-- This is the default in Nvim 0.7+
-	debounce_text_changes = 150,
-}
-
 return base

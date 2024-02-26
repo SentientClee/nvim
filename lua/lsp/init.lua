@@ -1,14 +1,33 @@
 -- Configure mason and mason-lspconfig first
 require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "svelte", "eslint", "gopls" },
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"lua_ls",
+		"tsserver",
+		"tailwindcss",
+		"svelte",
+		"eslint",
+		"gopls",
+		"gofumpt",
+		"goimports",
+		"stylua",
+		"prettierd",
+	},
 })
 -- cmp config
 require("lsp.completion")
 -- null-ls formatting/linting
 require("lsp.format")
 
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local on_attach = require("lsp.base").on_attach
+local lspconfig = require("lspconfig")
+
 -- ts
+-- NOTE: Allows organizing imports and removing unused in one command.
+-- See the following:
+-- https://www.reddit.com/r/neovim/comments/lwz8l7/how_to_use_tsservers_organize_imports_with_nvim/
+-- https://github.com/jose-elias-alvarez/typescript.nvim/issues/24
 local function organize_imports()
 	local params = {
 		command = "_typescript.organizeImports",
@@ -18,6 +37,10 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
+-- NOTE: This integrates with lspconfig and so you don't need to configure it separately.
+-- WARNING: This plugin is archived, but barring any breaking changes to
+-- the typescript-language-server it should continue to work.
+-- See: https://github.com/jose-elias-alvarez/typescript.nvim/issues/80
 require("typescript").setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
 	debug = false, -- enable debug logging for commands
@@ -25,9 +48,8 @@ require("typescript").setup({
 		fallback = true, -- fall back to standard LSP definition on failure
 	},
 	server = { -- pass options to lspconfig's setup method
-		on_attach = require("lsp.base").on_attach,
-		flags = require("lsp.base").lsp_flags,
-		capabilities = require("cmp_nvim_lsp").default_capabilities(),
+		on_attach = on_attach,
+		capabilities = capabilities,
 		commands = {
 			OrganizeImports = {
 				organize_imports,
@@ -38,29 +60,40 @@ require("typescript").setup({
 })
 
 -- Setups up tailwindcss server as well
-require("lspconfig")["tailwindcss"].setup({
-	on_attach = require("lsp.base").on_attach,
-	flags = require("lsp.base").lsp_flags,
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+lspconfig["tailwindcss"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 -- Eslint setup using language server
-require("lspconfig")["eslint"].setup({
-	on_attach = require("lsp.base").on_attach,
-	flags = require("lsp.base").lsp_flags,
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+lspconfig["eslint"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 -- lua
-require("lspconfig")["lua_ls"].setup({
-	on_attach = require("lsp.base").on_attach,
-	flags = require("lsp.base").lsp_flags,
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+lspconfig["lua_ls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 -- svelte
-require("lspconfig")["svelte"].setup({
-	on_attach = require("lsp.base").on_attach,
-	flags = require("lsp.base").lsp_flags,
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+lspconfig["svelte"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+-- go
+lspconfig["gopls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+		},
+	},
 })
