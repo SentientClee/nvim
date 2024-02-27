@@ -3,7 +3,7 @@ local function map(m, k, v)
 end
 
 -- oil "vinegar" style
-map("n", "-", require("oil").open)
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- fzf files
 map("n", "<C-p>", "<cmd>FzfLua files<CR>")
 -- fzf grep

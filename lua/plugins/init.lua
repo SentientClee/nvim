@@ -15,4 +15,18 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+  {
+    'stevearc/oil.nvim',
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("oil").setup({
+				view_options = { show_hidden = true },
+				keymaps = {
+					["<C-p>"] = false,
+					["<leader><C-p>"] = "actions.preview",
+				},
+			})
+		end,
+  }
 }
