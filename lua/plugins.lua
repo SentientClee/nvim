@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 					"css",
 					"html",
 					"javascript",
+					"go",
 					"json",
 					"lua",
 					"markdown",
