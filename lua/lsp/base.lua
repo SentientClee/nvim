@@ -1,10 +1,4 @@
 local base = {}
-require("lspsaga").setup({
-	diagnostic = {
-		on_insert = false,
-	},
-})
-require("trouble").setup({})
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

@@ -1,5 +1,7 @@
-local function map(m, k, v)
-	vim.keymap.set(m, k, v, { silent = true })
+local function map(m, k, v, opts)
+	opts = opts or {}
+	opts.silent = true
+	vim.keymap.set(m, k, v, opts)
 end
 
 -- oil "vinegar" style

@@ -1,30 +1,9 @@
--- Configure mason and mason-lspconfig first
-require("mason").setup()
-require("mason-tool-installer").setup({
-	ensure_installed = {
-		"lua_ls",
-		"tsserver",
-		"tailwindcss",
-		"svelte",
-		"eslint",
-		"gopls",
-		"gofumpt",
-		"goimports",
-		"stylua",
-		"prettierd",
-	},
-})
--- cmp config
-require("lsp.completion")
--- null-ls formatting/linting
-require("lsp.format")
-
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local on_attach = require("lsp.base").on_attach
 local lspconfig = require("lspconfig")
 
 -- ts
--- NOTE: Allows organizing imports and removing unused in one command.
+-- Allows organizing imports and removing unused in one command.
 -- See the following:
 -- https://www.reddit.com/r/neovim/comments/lwz8l7/how_to_use_tsservers_organize_imports_with_nvim/
 -- https://github.com/jose-elias-alvarez/typescript.nvim/issues/24
@@ -37,7 +16,7 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
--- NOTE: This integrates with lspconfig and so you don't need to configure it separately.
+-- This integrates with lspconfig and so you don't need to configure it separately.
 -- WARNING: This plugin is archived, but barring any breaking changes to
 -- the typescript-language-server it should continue to work.
 -- See: https://github.com/jose-elias-alvarez/typescript.nvim/issues/80
