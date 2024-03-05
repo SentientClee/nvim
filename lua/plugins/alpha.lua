@@ -21,7 +21,7 @@ return {
       dashboard.button("-", "  Explore", ":Oil<CR>"),
       dashboard.button("<C-k>", "󰘳  Commands", ":FzfLua<CR>"),
       dashboard.button("<C-p>", "  Find file", ":FzfLua files<CR>"),
-      dashboard.button("<C-f>", "  Find word", ":FzfLua live_grep<CR>"),
+      dashboard.button("<leader>f", "  Find word", ":FzfLua live_grep<CR>"),
       dashboard.button("q", "  Quit", ":qa<CR>"),
     }
 
