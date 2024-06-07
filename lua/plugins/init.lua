@@ -135,8 +135,4 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
-  {
-    -- typescript plugin for additional LSP support
-    "jose-elias-alvarez/typescript.nvim",
-  },
 }
