@@ -12,7 +12,7 @@ return {
         "tsserver",
         "tailwindcss",
         "svelte",
-        "eslint",
+        { "eslint", version = "4.8.0" },
         "gopls",
         "gofumpt",
         "goimports",
