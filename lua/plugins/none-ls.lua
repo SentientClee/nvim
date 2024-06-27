@@ -45,6 +45,9 @@ return {
         }),
         null_ls.builtins.formatting.gofumpt,
         null_ls.builtins.formatting.goimports,
+        null_ls.builtins.formatting.clang_format.with({
+          extra_args = { "--style=Google" }, -- protobuf formatting
+        }),
       },
       on_attach = on_attach,
     })

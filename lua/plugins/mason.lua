@@ -18,6 +18,7 @@ return {
         "goimports",
         "stylua",
         "prettierd",
+        "clang-format",
       },
     })
   end,
