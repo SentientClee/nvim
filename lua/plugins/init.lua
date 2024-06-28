@@ -121,14 +121,18 @@ return {
     end,
   },
   {
-    -- Diagnostic quick fix UI
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
     "nvimdev/lspsaga.nvim",
     config = function()
-      require("lspsaga").setup({})
+      require("lspsaga").setup({
+        -- disable code action lightbulb
+        lightbulb = {
+          enable = false,
+        },
+      })
+      -- disable virtual text
+      vim.diagnostic.config({
+        virtual_text = false,
+      })
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
