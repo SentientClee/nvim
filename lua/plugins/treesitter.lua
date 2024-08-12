@@ -13,6 +13,7 @@ return {
         "markdown",
         "markdown_inline",
         "svelte",
+        "terraform",
         "tsx",
         "typescript",
         "yaml",

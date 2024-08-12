@@ -15,6 +15,8 @@ return {
           return client.name == "null-ls"
         end,
         bufnr = bufnr,
+        async = false,
+        timeout_ms = 2000, -- allows for slower formatters like terraform_fmt
       })
     end
 
@@ -48,6 +50,7 @@ return {
         null_ls.builtins.formatting.clang_format.with({
           extra_args = { "--style=Google" }, -- protobuf formatting
         }),
+        null_ls.builtins.formatting.terraform_fmt,
       },
       on_attach = on_attach,
     })

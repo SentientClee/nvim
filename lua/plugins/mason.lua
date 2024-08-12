@@ -19,6 +19,8 @@ return {
         "stylua",
         "prettierd",
         "clang-format",
+        "terraform-ls",
+        "tflint",
       },
     })
   end,
