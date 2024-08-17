@@ -22,24 +22,24 @@ base.on_attach = function(_, bufnr)
   -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
   -- It also supports tagstack
   -- Use <C-t> to jump back
-  -- keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+  -- map("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
   -- Go to definition
-  -- keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
-  map("n", "gd", vim.lsp.buf.definition)
+  map("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+  -- map("n", "gd", vim.lsp.buf.definition)
 
   -- Peek type definition
   -- You can edit the file containing the type definition in the floating window
   -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
   -- It also supports tagstack
   -- Use <C-t> to jump back
-  -- keymap("n", "gy", "<cmd>Lspsaga peek_type_definition<CR>")
+  -- map("n", "gy", "<cmd>Lspsaga peek_type_definition<CR>")
   -- Go to type definition
-  -- keymap("n", "gy", "<cmd>Lspsaga goto_type_definition<CR>")
+  -- map("n", "gy", "<cmd>Lspsaga goto_type_definition<CR>")
   map("n", "gy", vim.lsp.buf.type_definition)
 
   -- References
   map("n", "gr", "<cmd>FzfLua lsp_references<CR>")
-  -- keymap('n', 'gr', vim.lsp.buf.references)
+  -- map('n', 'gr', vim.lsp.buf.references)
 
   -- Hover Doc
   -- If there is no hover doc,
@@ -47,7 +47,7 @@ base.on_attach = function(_, bufnr)
   -- there is no information available.
   -- To disable it just use ":Lspsaga hover_doc ++quiet"
   -- Pressing the key twice will enter the hover window
-  -- keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+  -- map("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 
   -- If you want to keep the hover window in the top right hand corner,
   -- you can pass the ++keep argument
@@ -55,7 +55,7 @@ base.on_attach = function(_, bufnr)
   -- close the hover window. If you want to jump to the hover window
   -- you should use the wincmd command "<C-w>w"
   map("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
-  -- keymap('n', 'K', vim.lsp.buf.hover)
+  -- map('n', 'K', vim.lsp.buf.hover)
 
   -- Toggle outline
   map("n", "<leader>o", "<cmd>Lspsaga outline<CR>")
@@ -65,15 +65,15 @@ base.on_attach = function(_, bufnr)
   map("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
   -- Format buffer
-  -- keymap('n', '<space>f', function() vim.lsp.buf.format { async = true } end)
+  -- map('n', '<space>f', function() vim.lsp.buf.format { async = true } end)
 
   -- Code action
   map({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-  -- keymap('n', '<space>ca', vim.lsp.buf.code_action)
+  -- map('n', '<space>ca', vim.lsp.buf.code_action)
 
   -- Rename all occurrences of the hovered word for the entire file
   map("n", "<leader>rn", "<cmd>Lspsaga rename<CR>")
-  -- keymap('n', '<space>rn', vim.lsp.buf.rename)
+  -- map('n', '<space>rn', vim.lsp.buf.rename)
 
   -- Show buffer diagnostics
   map("n", "<leader>sb", vim.diagnostic.setloclist)
@@ -83,19 +83,19 @@ base.on_attach = function(_, bufnr)
   -- Show line diagnostics
   -- You can pass argument ++unfocus to
   -- unfocus the show_line_diagnostics floating window
-  -- keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+  -- map("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
   -- Show cursor diagnostics
   -- Like show_line_diagnostics, it supports passing the ++unfocus argument
-  -- keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
+  -- map("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
 
   -- Diagnostic jump
-  -- keymap('n', '<space>e', vim.diagnostic.open_float)
+  -- map('n', '<space>e', vim.diagnostic.open_float)
   -- You can use <C-o> to jump back to your previous location
   map("n", "[g", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
-  -- keymap('n', '[d', vim.diagnostic.goto_prev)
+  -- map('n', '[d', vim.diagnostic.goto_prev)
   map("n", "]g", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-  -- keymap('n', ']d', vim.diagnostic.goto_next)
+  -- map('n', ']d', vim.diagnostic.goto_next)
 
   -- Diagnostic jump with filters such as only jumping to an error
   map("n", "[G", function()
