@@ -9,7 +9,7 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         "lua_ls",
-        "tsserver",
+        "ts_ls",
         "tailwindcss",
         "svelte",
         { "eslint", version = "4.8.0" },
