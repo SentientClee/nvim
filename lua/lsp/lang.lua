@@ -2,7 +2,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local on_attach = require("lsp.base").on_attach
 local lspconfig = require("lspconfig")
 
-lspconfig["tsserver"].setup({
+lspconfig["ts_ls"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
