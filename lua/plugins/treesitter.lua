@@ -18,6 +18,7 @@ return {
         "typescript",
         "yaml",
         "vimdoc",
+        "json5",
       },
       highlight = { enable = true },
       indent = { enable = true },
