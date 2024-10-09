@@ -8,19 +8,20 @@ return {
     require("mason").setup()
     require("mason-tool-installer").setup({
       ensure_installed = {
-        "lua_ls",
-        "ts_ls",
-        "tailwindcss",
-        "svelte",
+        "clang-format",
         { "eslint", version = "4.8.0" },
-        "gopls",
         "gofumpt",
         "goimports",
-        "stylua",
+        "gopls",
+        "lua_ls",
         "prettierd",
-        "clang-format",
+        "rust_analyzer",
+        "stylua",
+        "svelte",
+        "tailwindcss",
         "terraform-ls",
         "tflint",
+        "ts_ls",
       },
     })
   end,
