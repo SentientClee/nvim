@@ -11,7 +11,7 @@ Require to install tools from Mason
 - [node via nvm](https://github.com/nvm-sh/nvm)
 - [golang](https://go.dev/doc/install)
 
-Generally you can run `:checkhealth mason` to see what's missing and install it.
+Generally you can run `:checkhealth mason` to see what's missing and install it. You can also try to install the tool manuall in `:Mason` and see the error messages to rectify.
 
 ## Notes
 
