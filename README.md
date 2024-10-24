@@ -6,6 +6,13 @@ Required mainly for [fzf-lua](https://github.com/ibhagwan/fzf-lua). These can be
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
 
+Require to install tools from Mason
+
+- [node via nvm](https://github.com/nvm-sh/nvm)
+- [golang](https://go.dev/doc/install)
+
+Generally you can run `:checkhealth mason` to see what's missing and install it.
+
 ## Notes
 
 A list of things I want to do better in Neovim and so should configure.
