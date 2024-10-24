@@ -13,6 +13,8 @@ Require to install tools from Mason
 
 Generally you can run `:checkhealth mason` to see what's missing and install it. You can also try to install the tool manuall in `:Mason` and see the error messages to rectify.
 
+You will also need to install a font with icons so that you can see icons in Neovim.
+
 ## Notes
 
 A list of things I want to do better in Neovim and so should configure.
