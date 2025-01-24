@@ -43,7 +43,7 @@ return {
           extra_args = { "--indent-type", "Spaces", "--indent-width", "2" },
         }),
         null_ls.builtins.formatting.prettierd.with({
-          extra_filetypes = { "svelte" },
+          extra_filetypes = { "svelte", "json5" },
         }),
         null_ls.builtins.formatting.gofumpt,
         null_ls.builtins.formatting.goimports,
