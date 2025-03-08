@@ -1,5 +1,8 @@
--- Require settings first so that map leader is set before configuring plugins. This ensures mappings are correct according to lazy.nvim github docs.
+-- Require settings first so that map leader is set before configuring plugins.
+-- This ensures mappings are correct according to lazy.nvim github docs.
 require("settings")
+-- Custom keymaps
+require("keymaps")
 
 -- Bootstrap lazy.nvim according to github install instructions
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -15,5 +18,3 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
-
-require("keymaps")

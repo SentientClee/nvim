@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
@@ -21,9 +22,8 @@ return {
         "vimdoc",
         "yaml",
       },
-      highlight = { enable = true },
+      highlight = { enable = true, additional_vim_regex_highlighting = false },
       indent = { enable = true },
     })
   end,
-  dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
 }

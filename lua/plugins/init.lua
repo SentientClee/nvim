@@ -30,18 +30,10 @@ return {
     end,
   },
   {
-    -- netrw style file/folder navigation shortcuts
-    "stevearc/oil.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("oil").setup({
-        view_options = { show_hidden = true },
-        keymaps = {
-          ["<C-p>"] = false,
-          ["<leader><C-p>"] = "actions.preview",
-        },
-      })
-    end,
+    -- Git stuff
+    -- TODO: Recreate minimal git signs
+    "airblade/vim-gitgutter",
+    "tpope/vim-fugitive",
   },
   {
     -- Highlights
@@ -86,21 +78,6 @@ return {
     end,
   },
   {
-    -- fuzzy finder
-    -- NOTE: Be sure to install 'fd' and 'rg' for find and fuzzy search.
-    "ibhagwan/fzf-lua",
-    -- optional for icon support
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
-    -- Git signs in gutter
-    "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      require("gitsigns").setup()
-    end,
-  },
-  {
     -- Comment mappings
     "numToStr/Comment.nvim",
     config = function()
@@ -126,6 +103,9 @@ return {
       require("lspsaga").setup({
         -- disable code action lightbulb
         lightbulb = {
+          enable = false,
+        },
+        symbol_in_winbar = {
           enable = false,
         },
       })
