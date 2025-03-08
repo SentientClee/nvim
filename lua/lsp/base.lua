@@ -73,7 +73,7 @@ base.on_attach = function(_, bufnr)
 
   -- Rename all occurrences of the hovered word for the entire file
   map("n", "<leader>rn", "<cmd>Lspsaga rename<CR>")
-  -- map('n', '<space>rn', vim.lsp.buf.rename)
+  -- map("n", "<space>rn", vim.lsp.buf.rename)
 
   -- Show buffer diagnostics
   map("n", "<leader>sb", vim.diagnostic.setloclist)

@@ -30,6 +30,12 @@ return {
     end,
   },
   {
+    -- Git stuff
+    -- TODO: Recreate minimal git signs
+    "airblade/vim-gitgutter",
+    "tpope/vim-fugitive",
+  },
+  {
     -- Highlights
     -- TODO
     -- NOTE
@@ -120,9 +126,5 @@ return {
     build = function()
       vim.fn["mkdp#util#install"]()
     end,
-  },
-  {
-    "airblade/vim-gitgutter",
-    "tpope/vim-fugitive",
   },
 }
