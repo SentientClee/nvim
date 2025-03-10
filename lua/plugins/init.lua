@@ -127,4 +127,11 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
   },
+  {
+    -- Extensible UI for Neovim notifications and LSP progress messages.
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end,
+  },
 }
