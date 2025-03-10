@@ -9,7 +9,11 @@ return {
   },
   {
     -- provides extra lua lsp configs for vim configging
-    "folke/neodev.nvim",
+    "folke/lazydev.nvim",
+    ft = "lua",
+    config = function()
+      require("lazydev").setup()
+    end,
   },
   {
     -- popup ui with command aids
@@ -31,7 +35,6 @@ return {
   },
   {
     -- Git stuff
-    -- TODO: Recreate minimal git signs
     "airblade/vim-gitgutter",
     "tpope/vim-fugitive",
   },
@@ -74,13 +77,14 @@ return {
   {
     "alvarosevilla95/luatab.nvim",
     config = function()
-      require("luatab").setup({})
+      require("luatab").setup()
     end,
   },
   {
     -- Comment mappings
     "numToStr/Comment.nvim",
     config = function()
+      ---@diagnostic disable-next-line: missing-fields
       require("Comment").setup({
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       })
@@ -92,9 +96,7 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require("nvim-surround").setup()
     end,
   },
   {
@@ -120,18 +122,10 @@ return {
     },
   },
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
-  {
     -- Extensible UI for Neovim notifications and LSP progress messages.
     "j-hui/fidget.nvim",
     config = function()
-      require("fidget").setup()
+      require("fidget").setup({})
     end,
   },
 }

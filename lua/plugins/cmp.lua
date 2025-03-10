@@ -43,6 +43,7 @@ return {
           end
         end, { "i", "s" }),
       }),
+      ---@diagnostic disable-next-line: missing-fields
       formatting = {
         format = lspkind.cmp_format({
           mode = "symbol",
@@ -55,6 +56,10 @@ return {
         { name = "nvim_lsp_signature_help" },
         { name = "luasnip" },
         { name = "buffer" },
+        {
+          name = "lazydev",
+          group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+        },
       }),
     })
 

@@ -19,8 +19,8 @@ You will also need to install a font with icons so that you can see [web-devicon
 
 A list of things I want to do better in Neovim and so should configure.
 
-- README.md preview ability
 - Better text object mappings for tree sitter for improved movement
-- Auto pairs for closing (), {}, []. Likely requires integration with tree sitter.
-- Better keymaps for Gitsigns and git work
 - Add descriptions to keymaps
+- Remove the need for Lspsaga plugin
+- Replace luatab plugin
+- Recreate minimal git signs plugin

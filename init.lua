@@ -3,6 +3,8 @@
 require("settings")
 -- Custom keymaps
 require("keymaps")
+-- My plugins
+require("myplugins")
 
 -- Bootstrap lazy.nvim according to github install instructions
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
