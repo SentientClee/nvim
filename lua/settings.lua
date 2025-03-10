@@ -22,6 +22,8 @@ opt.smartcase = true
 opt.scrolloff = 3
 -- show the line number for each line
 opt.number = true
+-- show line number relative to the current line
+opt.relativenumber = true
 -- number of visual spaces per TAB
 opt.tabstop = 2
 -- autoindent indents 2 spaces
@@ -41,3 +43,6 @@ opt.splitright = true
 opt.splitbelow = true
 -- decrease timeoutlen
 opt.timeoutlen = 300
+-- These two options highlight the current line number.
+opt.cursorline = true
+opt.cursorlineopt = "number"
