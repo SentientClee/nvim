@@ -19,7 +19,7 @@ opt.ignorecase = true
 -- ignore case when using a search pattern
 opt.smartcase = true
 -- number of screen lines to show around cursor
-opt.scrolloff = 3
+opt.scrolloff = 8
 -- show the line number for each line
 opt.number = true
 -- show line number relative to the current line
