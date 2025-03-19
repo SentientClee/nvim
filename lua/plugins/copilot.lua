@@ -19,6 +19,18 @@ return {
     opts = {
       provider = "copilot",
       auto_suggestions = false,
+      mappings = {
+        --- @class AvanteConflictMappings
+        diff = {
+          ours = "co",
+          theirs = "ct",
+          all_theirs = "cA",
+          both = "cb",
+          cursor = "cC",
+          next = "]x",
+          prev = "[x",
+        },
+      },
     },
     build = "make",
     dependencies = {
