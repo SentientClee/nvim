@@ -14,10 +14,10 @@ vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
 
 -- Delete selection into void register and paste over it
-vim.keymap.set("x", "p", '"_dP', { desc = "Paste over selection" })
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste over selection" })
 -- Prevents overwriting the clipboard with deleted selection
-vim.keymap.set("n", "d", '"_d', { desc = "Delete" })
-vim.keymap.set("v", "d", '"_d', { desc = "Delete selection" })
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete" })
+vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete selection" })
 
 -- Quickfix navigation
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>zz", { desc = "Next quickfix item" })

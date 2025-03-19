@@ -12,6 +12,7 @@ return {
         { "eslint", version = "4.8.0" },
         "gofumpt",
         "goimports",
+        "golangci_lint_ls",
         "gopls",
         "lua_ls",
         "prettierd",

@@ -44,6 +44,12 @@ lspconfig["gopls"].setup({
   },
 })
 
+-- go linter
+lspconfig["golangci_lint_ls"].setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 -- lua
 lspconfig["lua_ls"].setup({
   on_attach = on_attach,
