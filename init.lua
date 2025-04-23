@@ -5,6 +5,10 @@ require("settings")
 require("keymaps")
 -- My plugins
 require("myplugins")
+-- VSCode/Cursor settings
+if vim.g.vscode then
+  require("vscode-settings")
+end
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -30,7 +34,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = {
-    -- Disable all plugins in vscode
+    -- Disable all plugins in vscode by default
     cond = not vim.g.vscode,
   },
 })

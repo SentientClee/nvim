@@ -93,7 +93,7 @@ return {
     "JoosepAlviste/nvim-ts-context-commentstring",
     lazy = true,
     event = "VeryLazy",
-    cond = true,
+    cond = true, -- Enable in vscode also
   },
   {
     -- Comment mappings
@@ -101,7 +101,7 @@ return {
     dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
-    cond = true,
+    cond = true, -- Enable in vscode also
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require("Comment").setup({
@@ -113,7 +113,7 @@ return {
     -- mappings to easily delete, change and add such surroundings in pairs
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    cond = true, -- Run everywhere
+    cond = true, -- Enable in vscode also
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup()
