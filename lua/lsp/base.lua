@@ -15,7 +15,8 @@ base.on_attach = function(_, bufnr)
   map("n", "gD", vim.lsp.buf.declaration)
 
   -- Go to implementation
-  map("n", "gi", vim.lsp.buf.implementation)
+  map("n", "gi", "<cmd>FzfLua lsp_implementations<CR>")
+  -- map("n", "gi", vim.lsp.buf.implementation)
 
   -- Go to definition or peek definition
   -- You can edit the file containing the definition in the floating window
