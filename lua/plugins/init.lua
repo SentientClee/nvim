@@ -8,20 +8,9 @@ return {
     "kyazdani42/nvim-web-devicons",
   },
   {
-    -- provides extra lua lsp configs for vim configging
-    "folke/lazydev.nvim",
-    ft = "lua",
-    config = function()
-      require("lazydev").setup()
-    end,
-  },
-  {
-    -- popup ui with command aids
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("which-key").setup()
-    end,
+    -- Git stuff
+    "airblade/vim-gitgutter",
+    "tpope/vim-fugitive",
   },
   {
     -- colorscheme
@@ -34,54 +23,22 @@ return {
     end,
   },
   {
-    -- Git stuff
-    "airblade/vim-gitgutter",
-    "tpope/vim-fugitive",
-  },
-  {
-    -- Highlights
-    -- TODO
-    -- NOTE
-    -- WARNING
-    -- FIX
-    "folke/todo-comments.nvim",
+    -- provides extra lua lsp configs for vim configging
+    "folke/lazydev.nvim",
+    ft = "lua",
     config = function()
-      require("todo-comments").setup({
-        highlight = {
-          pattern = [[.*<(KEYWORDS)\s*]],
-        },
-        search = {
-          pattern = [[\b(KEYWORDS)\b]],
-        },
-        keywords = {
-          FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
-          TODO = { icon = " ", color = "info", alt = { "Todo", "todo" } },
-          HACK = { icon = " ", color = "warning" },
-          WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX", "Warn", "Warning" } },
-          PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-          NOTE = { icon = " ", color = "hint", alt = { "INFO", "Note" } },
-          TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-        },
-      })
+      require("lazydev").setup()
     end,
   },
   {
-    -- statusline
-    "nvim-lualine/lualine.nvim",
+    -- popup ui with command aids
+    "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      require("lualine").setup({
-        options = {
-          theme = "tokyonight",
-        },
+      require("which-key").setup({
+        preset = "helix",
       })
     end,
-    dependencies = {
-      {
-        "nvim-tree/nvim-web-devicons",
-        lazy = true,
-      },
-    },
   },
   {
     "alvarosevilla95/luatab.nvim",
