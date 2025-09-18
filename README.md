@@ -19,7 +19,7 @@ You will also need to install a font with icons so that you can see [web-devicon
 
 A list of things I want to do better in Neovim and so should configure.
 
+- Read more of the Neovim docs
+- Figure out a replacement for Avante
 - Recreate luatab plugin
 - Recreate minimal git signs plugin
-- Potentially configuring the native auto complete as it improves
-- Potentially managing the lsp configs in my own `lsp/` folder

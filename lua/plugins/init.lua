@@ -123,4 +123,9 @@ return {
       require("fidget").setup({})
     end,
   },
+  {
+    -- Make sure to take breaks!
+    "wildfunctions/myeyeshurt",
+    opts = {},
+  },
 }

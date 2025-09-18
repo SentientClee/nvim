@@ -1,15 +1,4 @@
-local base_capabilities = vim.lsp.protocol.make_client_capabilities()
-local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-
--- Merge them so you keep both Neovim defaults and cmp enhancements
-local capabilities = vim.tbl_deep_extend("force", base_capabilities, cmp_capabilities)
-
--- Default LSP configuration
-vim.lsp.config("*", {
-  capabilities = capabilities,
-})
-
--- Customize LSP defaults.
+-- Additional LSP configuration after it attaches to a buffer.
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local function map(m, k, v, opts)

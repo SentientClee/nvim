@@ -3,6 +3,8 @@
 require("settings")
 -- Custom keymaps
 require("keymaps")
+-- LSP setup
+require("lsp")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -28,8 +30,3 @@ require("lazy").setup({
     { import = "plugins" },
   },
 })
-
--- LSP setup
--- Note: Order may matter here. We make sure nvim-cmp is loaded before setting up the LSP.
--- This way when we call cmp_nvim_lsp.default_capabilities(), it includes nvim-cmp capabilities.
-require("lsp")
