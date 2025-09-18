@@ -30,4 +30,6 @@ require("lazy").setup({
 })
 
 -- LSP setup
-require("lsp-setup")
+-- Note: Order may matter here. We make sure nvim-cmp is loaded before setting up the LSP.
+-- This way when we call cmp_nvim_lsp.default_capabilities(), it includes nvim-cmp capabilities.
+require("lsp")

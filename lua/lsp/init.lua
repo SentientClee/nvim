@@ -1,19 +1,17 @@
--- TODO: (?) Not sure this is needed anymore. Delete if not required.
--- local capabilities = require("cmp_nvim_lsp").default_capabilities()
---
--- -- Default LSP configuration
--- vim.lsp.config("*", {
---   capabilities = capabilities,
--- })
+local base_capabilities = vim.lsp.protocol.make_client_capabilities()
+local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+-- Merge them so you keep both Neovim defaults and cmp enhancements
+local capabilities = vim.tbl_deep_extend("force", base_capabilities, cmp_capabilities)
+
+-- Default LSP configuration
+vim.lsp.config("*", {
+  capabilities = capabilities,
+})
 
 -- Customize LSP defaults.
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client:supports_method("textDocument/completion") then
-      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-    end
-
     local function map(m, k, v, opts)
       opts = opts or {}
       opts.silent = true
@@ -42,13 +40,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- Enabled LSP servers
 vim.lsp.enable({
   "eslint",
-  "flow",
   "gopls",
   "golangci_lint_ls",
   "lua_ls",
   "rust_analyzer",
   "svelte",
-  "tailwindcss",
   "terraformls",
   "tflint",
   "ts_ls",
@@ -57,8 +53,7 @@ vim.lsp.enable({
 -- Diagnostics configuration
 vim.diagnostic.config({
   float = {
-    -- Only show source if there are multiple sources
-    source = "if_many",
+    source = true,
     -- Remove "Diagnostic:" header. Like obviously it's a diagnostic float.
     header = "",
   },
@@ -68,10 +63,10 @@ vim.diagnostic.config({
   },
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = "✘",
-      [vim.diagnostic.severity.WARN] = "▲",
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
       [vim.diagnostic.severity.HINT] = "⚑",
-      [vim.diagnostic.severity.INFO] = "»",
+      [vim.diagnostic.severity.INFO] = "",
     },
   },
 })

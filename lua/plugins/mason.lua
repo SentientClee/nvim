@@ -3,7 +3,7 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig", -- Ensures default configs are available.
+    "neovim/nvim-lspconfig", -- for default lsp configurations
   },
   config = function()
     require("mason").setup()
@@ -20,7 +20,6 @@ return {
         "rust_analyzer",
         "stylua",
         "svelte",
-        "tailwindcss",
         "terraform-ls",
         "tflint",
         "ts_ls",
