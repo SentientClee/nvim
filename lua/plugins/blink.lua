@@ -71,9 +71,6 @@ return {
         },
       },
       keymap = {
-        -- Override the 'enter' preset to always select the currently selected item
-        -- when pressing <CR>, even if none is selected.
-        ["<CR>"] = { "select_accept_and_enter", "fallback" },
         ["<Tab>"] = { "select_next", "fallback" },
         ["<S-Tab>"] = { "select_prev", "fallback" },
       },
