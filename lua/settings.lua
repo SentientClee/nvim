@@ -46,3 +46,5 @@ opt.timeoutlen = 300
 -- These two options highlight the current line number.
 opt.cursorline = true
 opt.cursorlineopt = "number"
+-- Include window borders on float windows
+opt.winborder = "rounded"

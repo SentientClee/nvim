@@ -21,6 +21,5 @@ A list of things I want to do better in Neovim and so should configure.
 
 - Better text object mappings for tree sitter for improved movement
 - Add descriptions to keymaps
-- Remove the need for Lspsaga plugin
 - Replace luatab plugin
 - Recreate minimal git signs plugin

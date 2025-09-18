@@ -3,8 +3,6 @@
 require("settings")
 -- Custom keymaps
 require("keymaps")
--- My plugins
-require("myplugins")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -30,3 +28,6 @@ require("lazy").setup({
     { import = "plugins" },
   },
 })
+
+-- LSP setup
+require("lsp-setup")

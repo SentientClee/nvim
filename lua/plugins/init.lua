@@ -117,28 +117,6 @@ return {
     end,
   },
   {
-    "nvimdev/lspsaga.nvim",
-    config = function()
-      require("lspsaga").setup({
-        -- disable code action lightbulb
-        lightbulb = {
-          enable = false,
-        },
-        symbol_in_winbar = {
-          enable = false,
-        },
-      })
-      -- disable virtual text
-      vim.diagnostic.config({
-        virtual_text = false,
-      })
-    end,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
     -- Extensible UI for Neovim notifications and LSP progress messages.
     "j-hui/fidget.nvim",
     config = function()

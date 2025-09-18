@@ -18,10 +18,3 @@ vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste over selection" })
 -- Prevents overwriting the clipboard with deleted selection
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete selection" })
-
--- Quickfix navigation
-vim.keymap.set("n", "<leader>cn", ":cnext<CR>zz", { desc = "Next quickfix item" })
-vim.keymap.set("n", "<leader>cp", ":cprev<CR>zz", { desc = "Previous quickfix item" })
--- Location list navigation
-vim.keymap.set("n", "<leader>ln", ":lnext<CR>zz", { desc = "Next location list item" })
-vim.keymap.set("n", "<leader>lp", ":lprev<CR>zz", { desc = "Previous location list item" })
