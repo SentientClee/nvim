@@ -1,6 +1,7 @@
 return {
   {
     "tpope/vim-fugitive",
+    "sindrets/diffview.nvim",
   },
   {
     "nvim-mini/mini.diff",
