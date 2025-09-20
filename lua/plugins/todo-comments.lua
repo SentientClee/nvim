@@ -1,9 +1,9 @@
 return {
   -- Highlights
-  -- TODO
-  -- NOTE
-  -- WARNING
-  -- FIX
+  -- TODO: do this
+  -- NOTE: note this
+  -- WARNING:  warn this
+  -- FIX: fix this
   "folke/todo-comments.nvim",
   config = function()
     require("todo-comments").setup({
