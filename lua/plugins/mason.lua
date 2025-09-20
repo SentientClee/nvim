@@ -10,7 +10,7 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         "clang-format",
-        { "eslint", version = "4.8.0" },
+        { "eslint", version = "4.8.0" }, -- Pinned as there was an issue with `v4.10.0`
         "gofumpt",
         "goimports",
         "golangci_lint_ls",

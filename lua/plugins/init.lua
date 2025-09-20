@@ -4,13 +4,17 @@ return {
     "nvim-lua/plenary.nvim",
   },
   {
-    -- icons
-    "kyazdani42/nvim-web-devicons",
+    -- provides extra lua lsp configs for vim configging
+    -- Note: The extra configuration for blink doesn't seem to be necessary.
+    "folke/lazydev.nvim",
+    ft = "lua",
+    config = function()
+      require("lazydev").setup()
+    end,
   },
   {
-    -- Git stuff
-    "airblade/vim-gitgutter",
-    "tpope/vim-fugitive",
+    -- icons
+    "kyazdani42/nvim-web-devicons",
   },
   {
     -- colorscheme
@@ -23,12 +27,17 @@ return {
     end,
   },
   {
-    -- provides extra lua lsp configs for vim configging
-    "folke/lazydev.nvim",
-    ft = "lua",
-    config = function()
-      require("lazydev").setup()
-    end,
+    -- Make sure to take breaks!
+    "wildfunctions/myeyeshurt",
+    opts = {},
+  },
+  {
+    -- Preview markdown files
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      file_types = { "markdown" },
+    },
+    ft = { "markdown" },
   },
   {
     -- popup ui with command aids
@@ -41,20 +50,28 @@ return {
     end,
   },
   {
+    -- Extensible UI for Neovim notifications and LSP progress messages.
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup({
+        notification = {
+          override_vim_notify = true,
+        },
+      })
+    end,
+  },
+  {
+    -- Simple tabline
     "alvarosevilla95/luatab.nvim",
     config = function()
       require("luatab").setup()
     end,
   },
   {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = true,
-    event = "VeryLazy",
-  },
-  {
     -- Comment mappings
     "numToStr/Comment.nvim",
     dependencies = {
+      -- Improves comment string for embedded languages in TS like TSX
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
     config = function()
@@ -72,17 +89,5 @@ return {
     config = function()
       require("nvim-surround").setup()
     end,
-  },
-  {
-    -- Extensible UI for Neovim notifications and LSP progress messages.
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup({})
-    end,
-  },
-  {
-    -- Make sure to take breaks!
-    "wildfunctions/myeyeshurt",
-    opts = {},
   },
 }

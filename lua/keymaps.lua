@@ -9,6 +9,10 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Increase scroll speed when using <C-e> and <C-y>
+vim.keymap.set("n", "<C-e>", "5<C-e>")
+vim.keymap.set("n", "<C-y>", "5<C-y>")
+
 -- Keep search results in center of the screen
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })

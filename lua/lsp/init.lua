@@ -50,6 +50,9 @@ vim.diagnostic.config({
     -- Always show the float when jumping through diagnostics
     float = true,
   },
+  -- Increases the severity of diagnostics from the base `10` so that error diagnostics
+  -- take precedence over other signs like git change signs.
+  severity_sort = true,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "",
