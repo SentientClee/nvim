@@ -22,7 +22,6 @@ A list of things I want to do better in Neovim and so should configure.
 - Read more of the Neovim docs
 - Utilize [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) to add more text objects for better movement or highlighting.
 - Recreate luatab plugin
-- Recreate minimal git signs plugin
 
 ## Pain points
 
