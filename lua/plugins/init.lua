@@ -34,10 +34,7 @@ return {
   {
     -- Preview markdown files
     "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      file_types = { "markdown" },
-    },
-    ft = { "markdown" },
+    ft = { "markdown", "codecompanion" },
   },
   {
     -- popup ui with command aids
