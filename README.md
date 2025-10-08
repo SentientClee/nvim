@@ -25,4 +25,5 @@ A list of things I want to do better in Neovim and so should configure.
 
 ## Pain points
 
--
+- No nice vim motion UI for renaming a symbol
+- The outline is out of order for `vim.lsp.buf.document_symbol()`

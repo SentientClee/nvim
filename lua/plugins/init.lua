@@ -27,11 +27,6 @@ return {
     end,
   },
   {
-    -- Make sure to take breaks!
-    "wildfunctions/myeyeshurt",
-    opts = {},
-  },
-  {
     -- Preview markdown files
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "codecompanion" },
