@@ -4,11 +4,8 @@ return {
     "nvim-lua/plenary.nvim",
   },
   {
-    -- icons
-    "kyazdani42/nvim-web-devicons",
-  },
-  {
     -- provides extra lua lsp configs for vim configging
+    -- Note: The extra configuration for blink doesn't seem to be necessary.
     "folke/lazydev.nvim",
     ft = "lua",
     config = function()
@@ -16,12 +13,8 @@ return {
     end,
   },
   {
-    -- popup ui with command aids
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("which-key").setup()
-    end,
+    -- icons
+    "kyazdani42/nvim-web-devicons",
   },
   {
     -- colorscheme
@@ -34,70 +27,43 @@ return {
     end,
   },
   {
-    -- Git stuff
-    "airblade/vim-gitgutter",
-    "tpope/vim-fugitive",
+    -- Preview markdown files
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = { "markdown", "codecompanion" },
   },
   {
-    -- Highlights
-    -- TODO
-    -- NOTE
-    -- WARNING
-    -- FIX
-    "folke/todo-comments.nvim",
-    config = function()
-      require("todo-comments").setup({
-        highlight = {
-          pattern = [[.*<(KEYWORDS)\s*]],
-        },
-        search = {
-          pattern = [[\b(KEYWORDS)\b]],
-        },
-        keywords = {
-          FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
-          TODO = { icon = " ", color = "info", alt = { "Todo", "todo" } },
-          HACK = { icon = " ", color = "warning" },
-          WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX", "Warn", "Warning" } },
-          PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-          NOTE = { icon = " ", color = "hint", alt = { "INFO", "Note" } },
-          TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-        },
-      })
-    end,
-  },
-  {
-    -- statusline
-    "nvim-lualine/lualine.nvim",
+    -- popup ui with command aids
+    "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      require("lualine").setup({
-        options = {
-          theme = "tokyonight",
+      require("which-key").setup({
+        preset = "helix",
+      })
+    end,
+  },
+  {
+    -- Extensible UI for Neovim notifications and LSP progress messages.
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup({
+        notification = {
+          override_vim_notify = true,
         },
       })
     end,
-    dependencies = {
-      {
-        "nvim-tree/nvim-web-devicons",
-        lazy = true,
-      },
-    },
   },
   {
+    -- Simple tabline
     "alvarosevilla95/luatab.nvim",
     config = function()
       require("luatab").setup()
     end,
   },
   {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = true,
-    event = "VeryLazy",
-  },
-  {
     -- Comment mappings
     "numToStr/Comment.nvim",
     dependencies = {
+      -- Improves comment string for embedded languages in TS like TSX
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
     config = function()
@@ -112,37 +78,9 @@ return {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
+    cond = true, -- enable in vscode too
     config = function()
       require("nvim-surround").setup()
-    end,
-  },
-  {
-    "nvimdev/lspsaga.nvim",
-    config = function()
-      require("lspsaga").setup({
-        -- disable code action lightbulb
-        lightbulb = {
-          enable = false,
-        },
-        symbol_in_winbar = {
-          enable = false,
-        },
-      })
-      -- disable virtual text
-      vim.diagnostic.config({
-        virtual_text = false,
-      })
-    end,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
-    -- Extensible UI for Neovim notifications and LSP progress messages.
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup({})
     end,
   },
 }

@@ -19,8 +19,11 @@ You will also need to install a font with icons so that you can see [web-devicon
 
 A list of things I want to do better in Neovim and so should configure.
 
-- Better text object mappings for tree sitter for improved movement
-- Add descriptions to keymaps
-- Remove the need for Lspsaga plugin
-- Replace luatab plugin
-- Recreate minimal git signs plugin
+- Read more of the Neovim docs
+- Utilize [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) to add more text objects for better movement or highlighting.
+- Recreate luatab plugin
+
+## Pain points
+
+- No nice vim motion UI for renaming a symbol
+- The outline is out of order for `vim.lsp.buf.document_symbol()`

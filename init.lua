@@ -3,11 +3,16 @@
 require("settings")
 -- Custom keymaps
 require("keymaps")
--- My plugins
-require("myplugins")
+-- LSP setup
+require("lsp")
+-- VSCode/Cursor settings
+if vim.g.vscode then
+  require("vscode-settings")
+end
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+---@diagnostic disable-next-line: undefined-field
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
@@ -28,5 +33,9 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
+  },
+  defaults = {
+    -- Disable all plugins in vscode by default
+    cond = not vim.g.vscode,
   },
 })
