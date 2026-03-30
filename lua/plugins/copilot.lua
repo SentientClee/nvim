@@ -20,18 +20,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = function()
-      require("codecompanion").setup({
-        display = {
-          diff = {
-            provider = "mini_diff",
-            provider_opts = {
-              inline = {
-                layout = "buffer",
-              },
-            },
-          },
-        },
-      })
+      require("codecompanion").setup({})
     end,
   },
 }
