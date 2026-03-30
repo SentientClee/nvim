@@ -6,8 +6,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- Keep cursor in the middle of the screen when scrolling
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+if not vim.g.vscode then
+  vim.keymap.set("n", "<C-d>", "<C-d>zz")
+  vim.keymap.set("n", "<C-u>", "<C-u>zz")
+end
 
 -- Increase scroll speed when using <C-e> and <C-y>
 vim.keymap.set("n", "<C-e>", "5<C-e>")
