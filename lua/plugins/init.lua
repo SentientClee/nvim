@@ -14,7 +14,7 @@ return {
   },
   {
     -- icons
-    "kyazdani42/nvim-web-devicons",
+    "nvim-tree/nvim-web-devicons",
   },
   {
     -- colorscheme
@@ -84,7 +84,7 @@ return {
     end,
   },
   {
-    "norcalli/nvim-colorizer.lua",
+    "NvChad/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup()
     end,

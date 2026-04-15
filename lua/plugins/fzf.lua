@@ -4,14 +4,11 @@ return {
   "ibhagwan/fzf-lua",
   -- optional for icon support
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    -- fzf files
-    vim.keymap.set("n", "<C-p>", "<cmd>FzfLua files<CR>")
-    -- fzf grep
-    vim.keymap.set("n", "<leader>f", "<cmd>FzfLua live_grep<CR>")
-    -- fzf buffers
-    vim.keymap.set("n", "<leader>b", "<cmd>FzfLua buffers<CR>")
-    -- fzf commands
-    vim.keymap.set("n", "<C-k>", "<cmd>FzfLua<CR>")
-  end,
+  cmd = { "FzfLua" },
+  keys = {
+    { "<C-p>", "<cmd>FzfLua files<CR>", desc = "Find files" },
+    { "<leader>f", "<cmd>FzfLua live_grep<CR>", desc = "Live grep" },
+    { "<leader>b", "<cmd>FzfLua buffers<CR>", desc = "Buffers" },
+    { "<C-k>", "<cmd>FzfLua<CR>", desc = "FzfLua commands" },
+  },
 }

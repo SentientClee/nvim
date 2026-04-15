@@ -4,16 +4,14 @@ local g = vim.g
 -- map leader key to space
 g.mapleader = " "
 
--- faster loading for commentstring module see:
--- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
-g.skip_ts_context_commentstring_module = true
-
 -- confirm to save changes before exiting modified buffer
 opt.confirm = true
 -- keep in sync with system clipboard
 opt.clipboard = "unnamedplus"
 -- disable swap files
 opt.swapfile = false
+-- persist undo history across sessions
+opt.undofile = true
 -- override 'ignorecase' when pattern has uppercase characters
 opt.ignorecase = true
 -- ignore case when using a search pattern
@@ -48,3 +46,10 @@ opt.cursorline = true
 opt.cursorlineopt = "number"
 -- Include window borders on float windows
 opt.winborder = "rounded"
+
+-- Briefly highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})

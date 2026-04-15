@@ -1,3 +1,7 @@
+-- Disable LSP logging to prevent log file growth (copilot is noisy).
+-- Set to "WARN" or "DEBUG" when debugging LSP issues.
+vim.lsp.set_log_level("OFF")
+
 -- Additional LSP configuration after it attaches to a buffer.
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
