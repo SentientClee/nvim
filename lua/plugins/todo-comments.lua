@@ -7,12 +7,6 @@ return {
   "folke/todo-comments.nvim",
   config = function()
     require("todo-comments").setup({
-      highlight = {
-        pattern = [[.*<(KEYWORDS)\s*]],
-      },
-      search = {
-        pattern = [[\b(KEYWORDS)\b]],
-      },
       keywords = {
         FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
         TODO = { icon = " ", color = "info", alt = { "Todo", "todo" } },
