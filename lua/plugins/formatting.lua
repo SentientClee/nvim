@@ -6,7 +6,13 @@ return {
     require("conform").setup({
       formatters_by_ft = {
         css = { "prettierd" },
-        go = { "gofumpt", "goimports" },
+        go = function(bufnr)
+          -- Extra { } wrapping the config file names so they are searched with equal priority
+          if vim.fs.root(bufnr, { { ".golangci.yml", ".golangci.yaml" } }) then
+            return { "goimports", "golangci-lint" }
+          end
+          return { "gofumpt", "goimports" }
+        end,
         html = { "prettierd" },
         javascript = { "prettierd" },
         javascriptreact = { "prettierd" },
