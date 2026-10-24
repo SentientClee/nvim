@@ -22,6 +22,7 @@ return {
         "svelte",
         "terraform-ls",
         "tflint",
+        "tree-sitter-cli",
         "ts_ls",
       },
     })

@@ -1,7 +1,3 @@
--- Disable LSP logging to prevent log file growth (copilot is noisy).
--- Set to "WARN" or "DEBUG" when debugging LSP issues.
-vim.lsp.set_log_level("OFF")
-
 -- Additional LSP configuration after it attaches to a buffer.
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
@@ -50,9 +46,14 @@ vim.diagnostic.config({
     -- Remove "Diagnostic:" header. Like obviously it's a diagnostic float.
     header = "",
   },
+  -- Always show the float when jumping through diagnostics
   jump = {
-    -- Always show the float when jumping through diagnostics
-    float = true,
+    on_jump = function(diagnostic, bufnr)
+      if not diagnostic then
+        return
+      end
+      vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false })
+    end,
   },
   -- Increases the severity of diagnostics from the base `10` so that error diagnostics
   -- take precedence over other signs like git change signs.
